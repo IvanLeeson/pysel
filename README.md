@@ -140,23 +140,31 @@ cd ~
 // nameserver 8.8.8.8
 // nameserver 4.4.4.4
 // sudo systemctl restart NetworkManager.service
-sudo useradd mcpoyle
-sudo useradd tina
-sudo useradd albus
-sudo useradd theseus
-sudo useradd jacob
-sudo useradd queenie
-sudo passwd -d queenie
-sudo passwd -d albus
-sudo usermod -aG sudo albus
-sudo chown tina /etc/passwd
+//Good side:
+sudo useradd ironman
+sudo useradd warmachine
+sudo useradd blackwidow
+sudo useradd blackpanther
+sudo useradd thevision
+sudo useradd spiderman
+//Bad side:
+sudo useradd captainamerica
+sudo useradd sharoncarter
+sudo useradd buckybarnes
+sudo useradd blackpanther
+sudo useradd antman
+sudo useradd scarletwitch
+sudo passwd -d warmachine
+sudo passwd -d captainamerica
+sudo usermod -aG sudo ironman
+sudo chown blackpanther /etc/passwd
 sudo touch /opt/listen.sh
-sudo mkdir /home/queenie
-sudo mkdir /home/queenie/Desktop
-sudo touch /home/queenie/Desktop/passwords.csv
+sudo mkdir /home/warmachine
+sudo mkdir /home/warmachine/Desktop
+sudo touch /home/warmachine/Desktop/passwords.csv
 sudo sed -i '2i auth    sufficient pam_succeed_if.so user ingroup nopasswdlogin' /etc/pam.d/gdm-password
 sudo groupadd nopasswdlogin
-sudo gpasswd --add queenie nopasswdlogin
+sudo gpasswd --add warmachine nopasswdlogin
 
 sudo apt update 
 sudo apt install git wireshark john rkhunter netcat mysql-server -y
